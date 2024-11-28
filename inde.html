@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="filters">
+        <select id="categoryFilter">
+            <option value="">All Categories</option>
+            <option value="electronics">Electronics</option>
+            <option value="men's clothing">Men's Clothing</option>
+            <option value="women's clothing">Women's Clothing</option>
+        </select>
+        <input type="text" id="searchInput" placeholder="Search products by name">
+        <input type="range" id="priceRange" min="0" max="500" value="500">
+        <span id="priceValue">$500</span>
+    </div>
+
+    <div id="loading" style="display: none;">Loading...</div>
+    <div id="error" style="color: red; display: none;"></div>
+
+    <div id="productGrid" class="product-grid"></div>
+
+    <!-- Product Detail Modal -->
+    <div id="productDetailModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h2 id="productTitle"></h2>
+            <img id="productImage" src="" alt="Product Image">
+            <p id="productDescription"></p>
+            <p id="productPrice"></p>
+            <h3>Related Products</h3>
+            <div id="relatedProducts" class="related-products"></div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

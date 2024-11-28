@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Store Products</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="filters">
+        <select id="categoryFilter">
+            <option value="">Select Category</option>
+            <option value="men's clothing">Men's Clothing</option>
+            <option value="women's clothing">Women's Clothing</option>
+            <option value="electronics">Electronics</option>
+            <option value="jewelery">Jewelry</option>
+        </select>
+
+        <input type="text" id="searchInput" placeholder="Search products by name" />
+
+        <input type="range" id="priceRange" min="0" max="200" value="200" />
+        <span id="priceValue">$200</span>
+    </div>
+
+    <h1>Fake Store Products</h1>
+    <div id="product-list" class="product-grid">
+        <!-- Products will be dynamically rendered here -->
+    </div>
+
+    <div id="loading">Loading...</div>
+    <div id="error" style="color: red;"></div>
+
+    <script src="index.js"></script>
+</body>
+</html>
